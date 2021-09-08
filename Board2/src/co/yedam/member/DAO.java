@@ -1,4 +1,4 @@
-package co.yedam.board;
+package co.yedam.member;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,9 +20,9 @@ public class DAO {
 	protected void connect() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.81:1521:xe", "hr", "hr");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
 			System.out.println(conn);
-			System.out.println("연결성공.");
+			System.out.println("연결성공");
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}

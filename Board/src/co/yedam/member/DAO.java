@@ -20,15 +20,15 @@ public class DAO {
 	protected void connect() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.81 :xe", "hr", "hr");
 			System.out.println(conn);
-			System.out.println("¿¬°á¼º°ø.");
+			System.out.println("ì—°ê²°ì„±ê³µ");
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	// ¿¬°áÇØÁ¦.
+	// ì—°ê²°í•´ì œ
 	protected void disconnect() {
 		if (conn != null) {
 			try {

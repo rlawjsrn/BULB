@@ -128,7 +128,7 @@ public class BoardDAO extends DAO {
 			psmt = conn.prepareStatement(seqsql);
 			rs = psmt.executeQuery();
 			if (rs.next()) {
-				int seq = rs.getInt(1); // 결과의 첫번째 컬럼값을 가져와라
+				int seq = rs.getInt(1); //결과의 첫번째 컬럼값을 가져와라
 
 				psmt = conn.prepareStatement(sql);
 				psmt.setInt(1, seq);

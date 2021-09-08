@@ -20,7 +20,9 @@ public class DAO {
 	protected void connect() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.81:1521:xe", "hr", "hr");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.81 \r\n" + 
+					"\r\n" + 
+					":1521:xe", "hr", "hr");
 			System.out.println(conn);
 			System.out.println("연결성공.");
 		} catch (ClassNotFoundException | SQLException e) {
@@ -28,7 +30,7 @@ public class DAO {
 		}
 	}
 
-	// 연결해제
+	// 연결해제.
 	protected void disconnect() {
 		if (conn != null) {
 			try {
